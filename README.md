@@ -8,19 +8,38 @@
 ```sh
 git clone https://github.com/scatyf3/Quality-of-life.git
 ```
+其次，安装依赖pandoc
 
-其次，将release.zip复制到你的工作目录
+```sh
+scoop install pandoc #windows
+brew install pandoc #macos
+sudo apt-get install pandoc #linux
+```
 
-最后运行指令
+将release.zip复制到你的工作目录
+
+运行指令
 
 ```sh
 unzip release.zip
+```
+
+当你要建立一个工作目录之前，运行
+```sh
 sh build.sh
+```
+
+某份作业完成之后，运行
+
+```sh
+sh warp.sh
 ```
 
 ## 使用效果
 
-可以创建出如下文件
+### build
+
+`build.sh`可以创建出如下文件
 
 ```
 .
@@ -55,6 +74,16 @@ sh build.sh
 
 # 实验反思
 ```
+
+### warp
+
+warp文件需要你手动输入数字，并且更改sh里的`encoded_string`为你的姓名学号。
+
+它从命令行中读取一个数字，然后:
+* 将对应的`lab<数字>/src`文件夹中的常见源代码(.c .cpp .java .py Makefile)拷贝到`export/lab<数字>/src`
+* 将`lab<数字>`文件夹中的`lab_report.md`拷贝到`export/lab<数字>`文件夹下，利用pandoc转化为docx
+* 压缩`export/lab<数字>`中的内容，将压缩包重命名为`encoded_string`
+
 
 ## 说明
 这个文件目录仅仅是个人的使用习惯
