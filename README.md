@@ -104,6 +104,8 @@ sh warp.sh
 # 实验反思
 ```
 
+这样，你就可以在你喜欢的并且优美简洁的markdown编辑器中写实验报告了🎉
+
 ### warp
 
 warp文件需要你手动输入数字，并且更改sh里的`encoded_string`为你的姓名学号。
